@@ -43,7 +43,7 @@ def bitness():
 
 filename = "Win{}OpenSSL-{}.exe".format(bitness(), openssl_version.replace(".", "_"))
 
-url = "https://slproweb.com/download/{}".format(filename)
+url = "https://github.com/LePresidente/modorganizer/releases/download/v2.0.8.3b/Win64OpenSSL-1_0_2j.exe"
 
 
 def build_func(context):
