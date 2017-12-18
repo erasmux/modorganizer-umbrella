@@ -107,7 +107,8 @@ usvfs_build = \
                     os.path.join(config["paths"]["build"], "usvfs", "vsbuild"),
                     "x64" if config['architecture'] == 'x86_64' else "x86")
 usvfs_build.depend(
-  github.Source(config['Main_Author'], "usvfs", "master")
+  #github.Source(config['Main_Author'], "usvfs", "master")
+  github.Source("erasmux", "usvfs", "vs_projects")
     .set_destination("usvfs"))
 usvfs_build.depend("boost"+suffix_32)
 usvfs_build.depend("GTest"+suffix_32)
@@ -175,7 +176,8 @@ for author, git_path, path, branch, dependencies, Build in [
      ["Qt5", "boost", "Python", "modorganizer-uibase",
       "sip"], True),
     (config['Main_Author'], "githubpp", "githubpp", "master", ["Qt5"], True),
-    (config['Main_Author'], "modorganizer", "modorganizer", "new_vfs_library", ["Qt5", "boost", "usvfs_32",
+#    (config['Main_Author'], "modorganizer", "modorganizer", "new_vfs_library", ["Qt5", "boost", "usvfs_32",
+    ("erasmux", "modorganizer", "modorganizer", "dev", ["Qt5", "boost", "usvfs_32",
                                                                       "modorganizer-uibase", "modorganizer-archive",
                                                                       "modorganizer-bsatk", "modorganizer-esptk",
                                                                       "modorganizer-game_features",

@@ -74,6 +74,6 @@ ncc = Project("NCC") \
                     .depend(build.Execute(prepare_nmm, name="append NexusClientCli project to NMM")
 
                             .depend(init_repos).depend(
-    github.Source(config['Main_Author'], "modorganizer-NCC", "master") \
+    github.Source("erasmux", "modorganizer-NCC", "master") \
     .set_destination(os.path.join("NCC", "NexusClientCli"))
     ))))
